@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson_8t</title>
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <p>
+      Дано послідовність цін товарів та назв (у окремих масивах). Вивести на
+      екран ті, які може собі дозволити користувач (кількість грошей задається).
+    </p>
+    <script>
+      const usersMoney = parseFloat(prompt("Введіть к-сть грошей"))
+      let productsPrices = [1000, 20, 31, 100, 35]
+      let productsTitles = [cheese, juice, bread, ketcup, onion]
+      function displayOnTheScreen(productsTitles, productsPrices, usersMoney) {
+        let displayOnTheScreen = []
+        for (let i = 0; i < productsPrices.length; i++) {
+          if (productsPrices[i] <= usersMoney)
+            displayOnTheScreen.push(productsTitles[i])
+        }
+        if (displayOnTheScreen.length !== 0)
+          document.write(`вистачило грошей на покупку${displayOnTheScreen}`)
+        else document.write(`не вистачило грошей`)
+      }
+    </script>
+  </body>
+</html>

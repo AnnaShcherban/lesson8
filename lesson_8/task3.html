@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <h1>Задача 3</h1>
+    <title>Lesson 8</title>
+  </head>
+  <body>
+    <p>
+      . Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я
+      «Іван».
+    </p>
+    <script>
+      let namePupils = ["Anna", "Peter", "Ivan", "Ivan", "Ivan"]
+      let Ivan = 0
+      for (let name = 0; name < namePupils.length; name++) {
+        if (namePupils[name] === "Ivan") Ivan += 1
+      }
+      document.write(`Імя Ivan зустрічається ${Ivan}`)
+    </script>
+  </body>
+</html>

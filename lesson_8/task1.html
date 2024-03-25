@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <h1>Задача 1</h1>
+    <title>Lesson8</title>
+  </head>
+  <body>
+    <p>
+      Дано масив, який містить оцінки з К предметів. Знайти середній бал і
+      з’ясувати до якої категорії він відноситься (відмінник, двійочник (має
+      хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча
+      би одна трійка)).
+    </p>
+    <script>
+      let rating = [2, 3, 4, 5, 3]
+      let avg = 0
+      for (i = 0; i < rating.length; i++) {
+        avg += rating[i]
+        avg = avg / rating.length
+      }
+      document.write(`Середній бал ${avg}`)
+    </script>
+  </body>
+</html>

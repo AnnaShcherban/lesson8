@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson_8</title>
+  </head>
+  <body>
+    <h1>Задача 7</h1>
+    <p>
+      Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей
+      за: за весь рік; у першій половині року; у другій половині року; за літо;
+      за ІІ квартал; за парні місяці (з парними номерами); за місяці, які є
+      початковими у сезоні (весна, літо, осінь, зима).
+    </p>
+    <script>
+      const amountOfMoney = [11, 46, 89, 46, 90, 34, 567, 44, 555, 33, 567, 89]
+      function amounnOfMoneyPerRange(
+        amountOfMoney,
+        startYear,
+        EndYear,
+        step = 1
+      ) {
+        let sum = 0
+        for (let m = startYear; m < EndYear; m += step) {
+          sum += amountOfMoney[m]
+        }
+        return sum
+      }
+
+      //кількість грошей за рік
+      const amoundPerYear = amounnOfMoneyPerRange(amountOfMoney, 0, 11)
+      //кількість грошей за півріччя
+      const amoundHalfYear = amounnOfMoneyPerRange(amountOfMoney, 0, 5)
+      //кількість грошей за друге півріччя
+      const amoundtheSecondHalfYear = amounnOfMoneyPerRange(
+        amountOfMoney,
+        5,
+        11
+      )
+      //кількість грошей за літо
+      const amoundtheSummer = amounnOfMoneyPerRange(amountOfMoney, 5, 7)
+      //кількість грошей за літо
+      const amoundtheFirstQuartal = amounnOfMoneyPerRange(amountOfMoney, 3, 5)
+      //кількість грошей за парні місяці
+      const amoundtheСouplesMonth = amounnOfMoneyPerRange(
+        amountOfMoney,
+        1,
+        11,
+        2
+      )
+      //кількість грошей за місяці, які є початковими у сезоні (весна, літо, осінь, зима)
+      const amoundBeginningOfTheSeason = amounnOfMoneyPerRange(
+        amountOfMoney,
+        2,
+        11,
+        3
+      )
+      document.write(`<br>кількість грошей за рік;${amoundPerYear}</br>`)
+      document.write(`<br>кількість грошей за півроку;${amoundHalfYear}</br>`)
+      document.write(
+        `<br>кількість грошей за рік;${amoundtheSecondHalfYear}</br>`
+      )
+      document.write(`<br>кількість грошей за півроку;${amoundtheSummer}</br>`)
+      document.write(
+        `<br>кількість грошей за рік;${amoundtheFirstQuartal}</br>`
+      )
+      document.write(
+        `<br>кількість грошей за півроку;${amoundtheСouplesMonth}</br>`
+      )
+      document.write(
+        `<br>кількість грошей за півроку;${amoundBeginningOfTheSeason}</br>`
+      )
+    </script>
+  </body>
+</html>
